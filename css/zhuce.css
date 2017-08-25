@@ -1,0 +1,104 @@
+.header-wrap{
+	width:100%;
+}
+header{
+	height:95px;
+}
+.content-wrap{
+	width:100%;
+	background:#fadeda;
+}
+.content{
+	height:600px;
+}
+.content .content-left{
+	width:774px;
+	height:600px;
+	float:left;
+}
+.content .content-left img{
+	margin:169px 270px 154px 274px;
+}
+.content .content-right{
+	width:416px;
+	height:600px;
+	float:left;
+}
+.content .content-right h3{
+	width:367px;
+	height:52px;
+	margin-top:77px;
+	line-height:52px;
+	font-size:20px;
+	font-weight:100;
+}
+.content .content-right h3 a{
+	float:right;
+	color:red;
+	font-size:14px;
+	margin-left:10px;
+}
+.content .content-right h3 a:nth-of-type(2){
+	color:#000;	
+}
+.content .content-right form{
+	width:367px;
+	height:379px;
+	background:#fcedea;
+}
+.content .content-right form input[type="text"]{
+	width:70%;
+	margin:45px 43px 0;
+	border:0;
+	padding:8px;
+}
+.content .content-right form input:nth-of-type(2){
+	width:30%;
+	margin: 10px 43px;
+}
+.content .content-right form input[type="button"]:hover{
+	opacity:.6;
+	transition:1s;
+}
+.content .content-right form input:nth-of-type(3){
+	width:133px;
+	height:30px;
+	background:#feaca0;
+	border:0;
+	margin-left:-32px;
+	font-size:12px;
+	color:#fff;
+}
+.content .content-right form input[type="password"]{
+	width:70%;
+	margin:10px 43px ;
+	border:0;
+	padding:8px;
+}
+.content .content-right form input[type="checkbox"]{
+	margin-left:43px;
+}
+.content .content-right form em{
+	float:right;
+	font-style:normal;
+	width:300px;
+}
+.content .content-right form em a{
+	color:#000;
+	text-decoration:underline;
+}
+.content .content-right form em a:hover{
+	color:red;
+}
+.content .content-right form button{
+	width:75%;
+	height:35px;
+	margin:12px 43px 20px;
+	border:0;
+	color:#fff;
+	background:#ff8a81;
+}
+.content .content-right form button:hover{
+	opacity:.6;
+	transition:1s;
+}
