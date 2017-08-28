@@ -90,15 +90,26 @@ header{
 .content .content-right form em a:hover{
 	color:red;
 }
-.content .content-right form button{
+.content .content-right form #btn{
 	width:75%;
 	height:35px;
 	margin:12px 43px 20px;
 	border:0;
 	color:#fff;
 	background:#ff8a81;
+	text-align:center;
 }
-.content .content-right form button:hover{
+.content .content-right form #btn:hover{
 	opacity:.6;
 	transition:1s;
+	cursor:pointer;
+}
+.content .content-right form .show{
+	width:80%;
+	height:14px;
+	font-size:14px;
+	float:left;
+	color:red;
+	margin-left:40px;
+	display:none;
 }

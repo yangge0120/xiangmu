@@ -1,8 +1,9 @@
 body{
 	background:#fdf2ec;
 }
-nav,header,footer,.content{
+nav,header,footer,.content,.box{
 	width:1190px;
+	overflow:hidden;
 	margin:0 auto;
 }
 
@@ -10,6 +11,7 @@ nav,header,footer,.content{
 	position:fixed;
 	right:0;
 	top:40%;
+	z-index:1000;
 }
 #list li a{
 	display:block;
@@ -112,7 +114,7 @@ nav .nav-right li:nth-of-type(1){
 }
 nav .nav-right li:nth-of-type(1) .show{
 	 width:300px;
-	 height:40px;
+	 height:60px;
 	 background:#fff;
 	 position:absolute;
 	 top:35px;
@@ -126,14 +128,24 @@ nav .nav-right li:nth-of-type(1) a:hover {
 }
 nav .nav-right li:nth-of-type(1):hover .show{
 	display:block;
+	z-index:2;
+	border:1px solid #ddd;
+	border-top:0;
 }
 nav .nav-right li:nth-of-type(3){
 	width:90px;
 	margin-left:10px;
 	text-align:center;
+	position:relative;
 }
 nav .nav-right li:nth-of-type(3) .nav-two{
-	display:none;
+	position:absolute;
+	width:87px;
+	background:#fff;
+	border:1px solid #ffb6a8;
+	border-top:0;
+	top:-1135px;
+	left:0;
 }
 nav .nav-right li:nth-of-type(3) .nav-two li{
 	width:100%;
@@ -151,11 +163,13 @@ nav .nav-right li:nth-of-type(3) span{
 nav .nav-right li:nth-of-type(3):hover {
 	background:#fff;
 	border:1px solid #ffb6a8;
+	border-bottom:0;
 	width:88px;
 
 }
 nav .nav-right li:nth-of-type(3):hover .nav-two{
-	display:block;
+	top:35px;
+	z-index:2;
 }
 nav .nav-right li:nth-of-type(3) .nav-two li{
 	height:30px;

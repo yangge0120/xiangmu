@@ -66,13 +66,13 @@
 				</div>
 				<div class="content-right">
 					<h3>会员登录<a href="zhuce.html">快速注册</a></h3>
-					<form action="" method="post">
+					<form  method="post">
 						<input type="text" placeholder="用户名" name="username" id="name"/>
 						<input type="password" placeholder="密码" name="password" id="psw"/>
-						<b id="skp" style="float:left;width:80%;height:30px;margin-left:40px;"></b>
+						<b id="skp" style="float:left;width:280px;height:30px;margin-left:40px;color:red;background:#000;display:none;"></b>
 						<input type="checkbox" />自动登陆
 						<a href="">忘记密码</a>
-						<button id="btn">登陆</button>
+						<input type="button" value="登录" id="btn">
 						<fieldset>
 							<legend>合作伙伴</legend>
 						</fieldset>
@@ -161,17 +161,19 @@
 			var oName = document.getElementById("name");
 			var oPsw = document.getElementById("psw");
 			var oSkp = document.getElementById("skp");
+			
 				oBtn.onclick = function(){
 					var username = oName.value;
 					var password = oPsw.value;
 					var data = {"username":username,"password":password};
+					
 					Ajax("post","php/denglu.php",foo,data);
 					
 					function foo(data){
-						
 						if(data == 1){
-							oSkp.innerHTML = "登陆成功";
+							window.location.href = "index.html";
 						}else{
+							oSkp.style.display= "block";
 							oSkp.innerHTML = "用户名或密码错误，请核对后登陆。";
 						}
 					}

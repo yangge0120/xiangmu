@@ -1,13 +1,15 @@
 <?php
 	header("content-type:text/html;charset=utf-8");
-$name = $_GET["username"];
-$psw = $_GET["password"];
-$arr_username  = array("13500000000","13900000000","13300000000","15200000000","13500000001","13900000001","13300000001","15200000001");
-$arr_password  = array("abc1234","aaa22222","aaaa33333","bbbb44444");
+$name = $_POST["username"];
+$psw = $_POST["password"];
+$arr =array(array("username" => "13500000000","password" => "123456"),array("username" => "13300000000","password"=>"123456")); 
 
-if(in_array($name,$arr_username) && in_array($psw,$arr_password)){
-	echo "1";
-}else{
-	echo "0";
+foreach($arr as $item){
+	if($item["username"] == $name && $item["password"] == $psw){
+		echo "1";
+		break;
+	}else{
+		echo "0";
+	}
 }
 ?>

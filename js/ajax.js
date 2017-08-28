@@ -7,16 +7,16 @@ function Ajax(type,url,fnSuc,data){
 	str = str.replace(/&$/,"");
 	type = type.toUpperCase();
 	if(type == "GET"){
-		xhr.open("GET",url+"?",true);
+		xhr.open("GET",url+"?"+str,true);
 		xhr.send();
 	}
 	if(type == "POST"){
 		xhr.open("POST",url,true);
 		xhr.setRequestHeader("content-type","application/x-www-form-urlencoded");
-		xhr.send();
+		xhr.send(str);
 	}
 	xhr.onreadystatechange = function(){
-		if(xhr.readystate == 4 && xhr.status == 200){
+		if(xhr.readyState == 4 && xhr.status == 200){
 			var data = xhr.responseText;
 			fnSuc(data);
 		}
