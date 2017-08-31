@@ -1,0 +1,278 @@
+header form{
+	position:absolute;
+	right:0;
+	top:30px;
+}
+header form input[type="text"]{
+	width:161px;
+	height:30px;
+	background:#fff;
+	border:1px solid #ddd;
+	border-right:0;
+	float:left;
+}
+header form a{
+	width:40px;
+	height:32px;
+	float:left;
+	border:1px solid #ddd;
+	border-left:0;
+	background:#fff url(../img/icon_ser.jpg)no-repeat;
+}
+header form input[type="button"]{
+	width:80px;
+	height:34px;
+	background:#fff;
+	border:1px solid #ddd;
+	margin-left:20px;
+}
+header form input[type="button"]:hover{
+	color:red;
+	cursor:pointer;
+}
+
+
+.nav1-wrap{
+	float:left;
+	width:100%;
+	background:#909090;
+}
+.nav1{
+	float:left;
+	margin-left:26px;
+}
+.nav1 >li{
+	float:left;
+}
+.nav1 li a{
+	float:left;
+	width:100px;
+	height:35px;
+	font-size:12px;
+	color:#fff;
+	text-align:center;
+	line-height:35px;
+}
+.nav1 >li:nth-of-type(1) a{
+	background:#fdb2a4;
+}
+.nav1 li a:hover{
+	background:#fdb2a4;
+}
+.nav2{
+	float:right;
+}
+.nav2 li{
+	float:left;
+}
+.nav2 li a{
+	float:left;
+	width:100px;
+	height:35px;
+	font-size:12px;
+	color:#fff;
+	text-align:center;
+	line-height:35px;
+}
+.nav2 li a:hover{
+	background:#fdb2a4;
+}
+.zuanshi{
+	width:100%;
+	height:370px;
+	overflow:hidden;
+	position:absolute;
+	left:0;
+	top:35px;
+	z-index:1;
+	background:#fff;
+	display:none;
+}
+.nav1 li:hover .zuanshi{
+	display:block;
+}
+.zuanshi .zuanshi-left{
+	float:left;
+	border-right:1px solid #ddd;
+	padding:20px 10px 40px 140px;
+} 
+.zuanshi .zuanshi-left ul{
+	float:left;
+}
+.zuanshi .zuanshi-left ul:nth-of-type(1) li:nth-of-type(1) a{
+	float:left;
+	font-size:20px;
+	margin-top:10px;
+}
+.zuanshi .zuanshi-left ul:nth-of-type(1) li:nth-of-type(2) a{
+	float:left;
+	font-size:14px;
+	margin-top:-10px;
+}
+.zuanshi .zuanshi-left ul li a:hover{
+	color:#fdb2a4;
+	background:0;
+}
+.zuanshi .zuanshi-left ul li a{
+	float:left;
+	width:110px;
+	height:30px;
+	margin-top:5px;
+	color:#000;
+}
+.zuanshi .zuanshi-left ul:nth-of-type(2) {
+		margin-top:60px;
+}
+.zuanshi .zuanshi-right{
+	float:left;
+}
+.zuanshi .zuanshi-right ul{
+	float:left;
+	width:150px;
+	padding:80px 40px ;
+}
+.zuanshi .zuanshi-right ul li{
+	float:left;
+}
+.zuanshi .zuanshi-right ul li a{
+	float:left;
+	width:150px;
+	height:30px;
+	margin-top:5px;
+	color:#000;
+}
+.zuanshi .zuanshi-right ul li a:hover{
+	color:#fdb2a4;
+	background:0;
+}
+.zuanshi .zuanshi-right #nav-pic{
+	margin:70px 40px;
+}
+.xqBox-wrap{
+	float:left;
+	width:100%;
+	background:#fff;
+}
+.xqBox{
+	width:1190px;
+	height:505px;
+	margin:0 auto;
+}
+.xqtitle{
+	width:1190px;
+	height:50px;
+	line-height:50px;
+	margin:0 auto;
+}
+.xqtitle a{
+	color:#000;
+}
+.xqBox .xqBox-left{
+	float:left;
+	width:537px;
+	height:480px;
+	position:relative;
+}
+.xqBox .xqBox-left .xqnav{
+	width:550px;
+	height:60px;
+	position:absolute;
+	top:400px;
+	left:127px;
+}
+.xqBox .xqBox-left .xqBoxbig {
+	text-align:center;
+}
+.xqBox .xqBox-left .xqnav li{
+	float:left;
+	width:60px;
+	height:60px;
+}
+.xqBox .xqBox-left .xqnav li:nth-of-type(1){
+	border:1px solid #ddd;
+	margin-left:5px;
+}
+.xqBox .xqBox-left .xqnav li:nth-of-type(2){
+	border:1px solid #ddd;
+	margin-left:5px;
+}
+.xqBox .xqBox-left .xqnav li:nth-of-type(3){
+	border:1px solid #ddd;
+	margin-left:5px;
+}
+.xqBox .xqBox-left .xqnav li:nth-of-type(4){
+	border:1px solid #ddd;
+	margin-left:5px;
+}
+.xqBox .xqBox-left .xqnav  img{
+	display:block;
+	width:60px;
+	height:60px;
+}
+.xqBox .xqBox-right{
+	float:right;
+	width:535px;
+	height:480px;
+}
+.xqBox-right h2{
+	width:100%;
+	height:40px;
+	font-size:20px;
+	font-weight:100;
+}
+.xqBox-right em{
+	font-style:normal;
+	margin:10px;
+	display:inline-block;
+}
+.xqBox-right em span{
+	color:red;
+	margin-left:5px;
+}
+.xqBox-right .xqjs{
+	width:100%;
+	height:300px;
+	border-top:1px solid #000;
+	border-bottom:1px solid #000;
+}
+.xqBox-right .xqjs p{
+	width:100%;
+	height:50px;
+	padding-top:10px;
+}
+.xqBox-right .xqjs p i{
+	font-style:normal;
+	margin-left:100px;
+	color:red;
+}
+.xqBox-right .xqdown b{
+	width:140px;
+	display:inline-block;
+	margin-top:20px;
+	height:30px;
+}
+.xqBox-right .xqdown input[type="text"]{
+	width:30%;
+	height:30px;
+	text-align:center;
+	color:#000;
+	cursor:pointer;
+	margin-left:10px;
+}
+.xqBox-right .xqdown input[type="button"]{
+	width:138px;
+	height:32px;
+	border:0;
+	background:#ff8a81;
+	color:#fff;
+	margin-top:20px;
+	margin-left:20px;
+	cursor:pointer;
+}
+.xqBox-right .xqdown input:last-child{
+	background:#b7ac7e;
+}
+.xqBox-right .xqdown input[type="button"]:hover{
+	opacity:.4;
+	transition:1s;
+}

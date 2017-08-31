@@ -3,9 +3,9 @@
 	<head>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="css/common.css" />
-		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" href="css/list-xiang.css" />
 		<link rel="stylesheet" href="css/ba.css" />
-		<title>首页</title>
+		<title>详情</title>
 	</head>
 	<body>
 		<ul id="list">
@@ -18,7 +18,6 @@
 			<img src="img/code.jpg" />
 			</li>
 		</ul>
-		<!--登陆的主页-->
 		<!--头部-导航-->
 		<div class="nav-wrap">
 			<nav>
@@ -107,7 +106,7 @@
 						</div>
 					</li>
 					<li>
-						<a href="list.html">婚戒</a>
+						<a href="">婚戒</a>
 						<div class="zuanshi">
 							<div class="zuanshi-left">
 								<ul>
@@ -292,95 +291,22 @@
 			    </ul>
 			</div>	
 		</div>
-		<!--lunbo-->
-		<div class="main">
-			<div class="mpic">
-				<ul>
-					<li><a href="#"></a></li>
-					<li><a href="#"></a></li>
-					<li><a href="#"></a></li>
-					<li><a href="#"></a></li>
-					<li><a href="#"></a></li>	
-				</ul>	
-			</div>
-			<div class="mnav">
-				<ul>
-					<li class="move"></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-				</ul>
-			</div>
-			<a class="prev" href="javascript:;"></a>
-			<a class="next" href="javascript:;"></a>
-		</div>
-		<!--静态图片-->
-		<div class="jingtai-wrap">
-			<div class="bird">
-				<div class="b-left">
-					<h2>设计订婚戒指</h2>
-					<div class="bl-lun">
-						<div class="bl-diy1"></div>
-						<div class="bl-diy2"></div>
-						<div class="bl-diy3"></div>
+		<!--详情页面-->
+			<div class="xqBox-wrap">
+				<div class="xqtitle">
+												
+				</div>
+				<div class="xqBox">
+					<div class="xqBox-left">
+						<div class="xqBoxbig">						
+						</div>
+						<ul class="xqnav">
+						</ul>					
 					</div>
-					<a href="javascript:;" class="bl-btn">从挑选钻石开始</a>
-					<a href="javascript:;" class="bl-btn1">从挑选款式开始</a>
-				</div>
-				<img src="img/ma.jpg"/>
-			</div>
-		</div>
-		<!--导航轮播-->
-		<div class="xilie-wrap">
-			<div class="xilie" style="position:relative;">
-				<h2>系列产品</h2>
-				<div class="xilieNav">
-					<em class="on">推荐</em>
-					<em>钻石</em>
-					<em>婚戒</em>
-					<em>对戒</em>
-					<em>配饰</em>
-				</div>
-				<div class="xilieMove" style="display:block;">
-					<span>
-						<a href="javascript:;"><img src="img/ma1.jpg" /></a>
-						<a href="javascript:;"><img src="img/ma2.jpg" /></a>
-					</span>
-						<a href="javascript:;" class="xmPic">
-							<img src="img/ma3.jpg" />
-						</a>
-				</div>
-				<div class="xilieMove">
-					<span>
-						<a href="javascript:;"><img src="img/ma4.jpg" /></a>
-						<a href="javascript:;"><img src="img/ma6.jpg" /></a>
-					</span>
-						<a href="javascript:;" class="xmPic"><img src="img/ma5.jpg" /></a>
-				</div>
-				<div class="xilieMove">
-					<span>
-						<a href="javascript:;"><img src="img/mm1.jpg" /></a>
-						<a href="javascript:;"><img src="img/mm2.jpg" /></a>
-					</span>
-						<a href="javascript:;" class="xmPic"><img src="img/mm3.jpg" /></a>
-				</div>
-				<div class="xilieMove">
-					<span>
-						<a href="javascript:;"><img src="img/ma1.jpg" /></a>
-						<a href="javascript:;"><img src="img/ma2.jpg" /></a>
-					</span>
-						<a href="javascript:;" class="xmPic"><img src="img/ma3.jpg" /></a>
-				</div>
-				<div class="xilieMove">
-					<span>
-						<a href="javascript:;"><img src="img/ma4.jpg" /></a>
-						<a href="javascript:;"><img src="img/ma6.jpg" /></a>
-					</span>
-						<a href="javascript:;" class="xmPic"><img src="img/ma5.jpg" /></a>
+					<div class="xqBox-right">
+					</div>
 				</div>
 			</div>
-		</div>
 		<!--底部-->
 		<div class="footer-wrap">
 			<footer>
@@ -454,100 +380,21 @@
 	</body>
 	<script src="js/jquery-1.11.0.js"></script>
 	<script>
-
 		$(function(){
-			
-			var i = 0 ;
-
-				function move(){
-					clearInterval(timer);
-						i++;
-						if(i == $(".mpic li").length){
-						i=0;
-						}
-						if(i == -1){
-							i = $(".mpic li").length -1;
-						}
-						
-					$(".mpic li").eq(i).fadeIn(1000)
-
-					.siblings().fadeOut(1000);
+			var strSearch = location.search;
+			var arrSearch = strSearch.split("=");
+			var id = arrSearch[1];
+			$.get("json/list.json",function(data){
+				var html="<img src='"+data[id].imgUrl[0]+"'>";
+				var wen = "<a href='index.html'>首页&gt;</a><a href='list.html'>钻戒&gt;</a><a href='javascript:;'>"+data[id].title1+"</a>";
+				var list = "<li><img src='"+data[id].imgUrl[0]+"'></li><li><img src='"+data[id].imgUrl[1]+"'></li><li><img src='"+data[id].imgUrl[2]+"'></li><li><img src='"+data[id].imgUrl[3]+"'></li>";
+				var title = "<h2>"+data[id].title+"</h2><div class='xqpire'><em>"+data[id].biaoti[0]+"<span>"+data[id].biaoti[1]+"</span></em><em>"+data[id].biaoti2[0]+"<span>"+data[id].biaoti2[1]+"</span></em><em>"+data[id].biaoti3[0]+"<span>"+data[id].biaoti3[1]+"</span></em></div><div class='xqjs'><p><strong>"+data[id].xq[0]+"</strong><i>"+data[id].xq[1]+"</i></p><p><strong>"+data[id].xq2[0]+"</strong><i>"+data[id].xq2[1]+"</i></p><p><strong>"+data[id].xq3[0]+"</strong><i>"+data[id].xq3[1]+"</i></p><p><strong>"+data[id].xq4[0]+"</strong><i>"+data[id].xq4[1]+"</i></p><p><strong>"+data[id].xq5[0]+"</strong><i>"+data[id].xq5[1]+"</i></p></div><div class='xqdown'><b>更多</b><input type='text' value='选择其他同款现货'><input type='text' value='专属定制'><input type='button' value='加入购物车' id='btn'><input type='button' value='免息分期' id='btn1'></div>"
 				
-					$(".mnav li").eq(i).addClass("move").siblings().removeClass("move");	
-					
-				}
-				
-			var timer = setInterval(function(){
-				move();	
-			},3000);
-			
-				$(".next").click(function(){
-					clearInterval(timer);
-					move();
-				})
-			$(".main").mouseenter(function(){
-				clearInterval(timer);
-				$(".prev").show();
-				$(".next").show();
-			})
-			
-			$(".main").mouseleave(function(){
-				
-				move();
-				$(".prev").css({"display":"none"});
-				$(".next").css({"display":"none"});
-			})
-			
-			$(".prev").click(function(){
-				clearInterval(timer);
-				i = i-2;
-				move();
-			})
-			$(".mnav li").hover(function(){
-				i = $(this).index()-1;
-				move();
-				clearInterval(timer);
+				$(".xqBoxbig").html(html);
+				$(".xqtitle").html(wen);
+				$(".xqnav").html(list);
+				$(".xqBox-right").html(title);
 			})
 		})
-	</script>
-	<script>
-		$(function(){
-			var i = 0;
-			function lMove(){
-					i++;
-					if(i == $(".bl-lun div").length){
-						i=0;
-					}
-				$(".bl-lun div").eq(i).fadeIn(500)
-				.siblings().fadeOut(500);
-			}
-			var litmer = setInterval(function(){
-				lMove();
-			},3000)
-		})
-	</script>
-	<script>
-		$(function(){
-			var i = 0;
-			function xlMove(){
-				i++;
-				if(i == $(".xilie .xilieMove").length){
-					i = 0;
-				}
-				$(".xilie .xilieMove").eq(i).fadeIn(1000)
-				.siblings(".xilieMove").fadeOut(1000);
-				$(".xilieNav em").eq(i).addClass("on").siblings().removeClass("on");
-			}
-			var xlTimer = setInterval(function(){
-				xlMove();
-			},3000)
-			$(".xilieNav em").mouseenter(function(){
-				clearInterval(xlTimer);
-				i = $(this).index()-1;
-				console.log(i);
-				xlMove();
-			})
-			
-		});
 	</script>
 </html>
